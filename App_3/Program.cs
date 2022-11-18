@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_3
 {
-    internal class Program
+    internal class License
     {
         static void Main(string[] args)
         {
@@ -55,80 +55,76 @@ namespace App_3
                     }
 
 
-                    default:
+                default:
 
                     Console.WriteLine("Невiрна дiя. Такого коду немає.");
 
-                        break;
+                    break;
 
             }
-            
-
 
         }
+
+
+            class DocumentWorker
+        {
+
+            public virtual void OpenDocument()
+            {
+
+                Console.WriteLine("Документ вiдкритий");
+
+            }
+
+            public virtual void EditDocument()
+            {
+
+                Console.WriteLine("Правка документа доступна у версiї - Pro");
+
+            }
+
+            public virtual void SaveDocument()
+            {
+
+                Console.WriteLine("Збереження документа доступне у версiї - Pro");
+
+            }
+
+        }
+
+
+        class ProDocumentWorker : DocumentWorker
+        {
+
+            public override void EditDocument()
+            {
+
+                Console.WriteLine("Документ вiдредаговано");
+
+            }
+
+            public override void SaveDocument()
+            {
+                Console.WriteLine("Документ збережено у старому форматi, збереження в iнших форматах доступне у версiї - Expert");
+            }
+
+        }
+
+
+        class ExpertDocumentWorker : ProDocumentWorker
+        {
+
+            public override void SaveDocument()
+            {
+
+                Console.WriteLine("Документ збережений в новому форматi");
+
+            }
+
+        }
+
+
 
     }
-
-
-    class DocumentWorker
-    {
-
-        public virtual void OpenDocument()
-        {
-
-            Console.WriteLine("Документ вiдкритий");
-
-        }
-
-        public virtual void EditDocument()
-        {
-
-            Console.WriteLine("Правка документа доступна у версiї - Pro");
-
-        }
-
-        public virtual void SaveDocument()
-        {
-
-            Console.WriteLine("Збереження документа доступне у версiї - Pro");
-
-        }
-
-    }
-
-
-    class ProDocumentWorker : DocumentWorker
-    {
-
-        public override void EditDocument()
-        {
-
-            Console.WriteLine("Документ вiдредаговано");
-
-        }
-
-        public override void SaveDocument()
-        {
-            Console.WriteLine("Документ збережено у старому форматi, збереження в iнших форматах доступне у версiї - Expert");
-        }
-
-    }
-
-
-    class ExpertDocumentWorker : ProDocumentWorker
-    {
-
-        public override void SaveDocument()
-        {
-
-            Console.WriteLine("Документ збережений в новому форматi");
-
-        }
-
-    }
-
-
-
-
 
 }

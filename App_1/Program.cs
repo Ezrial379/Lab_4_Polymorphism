@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1_App
 {
-    internal class Program
+    internal class Colors
     {
         static void Main(string[] args)
         {
@@ -27,71 +27,71 @@ namespace _1_App
 
 
         }
-    }
 
 
-
-
-
-    class Printer
-    {
-
-        public string Value;
-
-        public virtual void Print()
-        {
-            Value = "\nPrinted in usual color \n";
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(Value);
-        }
-
-    }
-
-
-    class Printer_R : Printer
-    {
-
-
-        public override void Print()
-        {
-            Value = "\nPrinted in red color \n";
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(Value);
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
-    }
-
-
-    class Printer_G : Printer
-    {
-
-        public override void Print()
-        {
-            Value = "\nPrinted in green color \n";
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(Value);
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
-    }
-
-
-
-    class Printer_B : Printer
-    {
-
-        public override void Print()
-
+        class Printer
         {
 
-            Value = "\nPrinted in blue color \n";
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(Value);
-            Console.ForegroundColor = ConsoleColor.White;
+            public string Value;
+
+            public virtual void Print()
+            {
+                Value = "\nPrinted in usual color \n";
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(Value);
+            }
 
         }
 
+
+        class Printer_R : Printer
+        {
+
+
+            public override void Print()
+            {
+                Value = "\nPrinted in red color \n";
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(Value);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
+        }
+
+
+        class Printer_G : Printer
+        {
+
+            public override void Print()
+            {
+                Value = "\nPrinted in green color \n";
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(Value);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
+        }
+
+
+
+        class Printer_B : Printer
+        {
+
+            public override void Print()
+
+            {
+
+                Value = "\nPrinted in blue color \n";
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(Value);
+                Console.ForegroundColor = ConsoleColor.White;
+
+            }
+
+        }
+
+
     }
+  
 
 }
