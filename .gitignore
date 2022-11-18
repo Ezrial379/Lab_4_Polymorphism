@@ -4,11 +4,14 @@ App_1/Properties/*
 App_1/obj/Debug/*
 App_1/App.config
 App_1/bin/Debug/*
+App_1/Task_1.csproj
 App_2/Properties/*
 App_2/obj/Debug/*
 App_2/App.config
 App_2/bin/Debug/*
+App_2/Task_2.csproj
 App_3/Properties/*
 App_3/obj/Debug/*
 App_3/App.config
 App_3/bin/Debug/*
+App_3/Task_3.csproj
